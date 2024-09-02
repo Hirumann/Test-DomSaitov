@@ -1,0 +1,259 @@
+@import "./index.css";
+
+html {
+    font-size: 16px;
+}
+
+input[type="checkbox"] {
+    width: 24px !important;
+    height: 24px;
+}
+
+input[type="file"] {
+    width: 335px !important;
+    height: 56px;
+    background-color: transparent;
+    border: 1px solid var(--main-blue);
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+select option {
+    font-size: 1.25rem;
+}
+
+label {
+    font-size: 1.375rem;
+    margin-bottom: 12px;
+    color: #4A585E;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 1400px; /* Линия будет занимать всю ширину контейнера */
+    font-size: 1.625rem;
+    margin-left: -300px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    flex-grow: 1;
+    border-bottom: 1px solid var(--main-blue);
+}
+
+.divider:not(:empty)::before {
+    margin-right: 20px;
+}
+
+.divider:not(:empty)::after {
+    margin-left: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 100px 260px;
+    color: #4A585E;
+}
+
+.main__notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.main__notification img {
+    width: 104px;
+    height: 104px;
+    margin-right: 10px;
+}
+
+.main__notification p {
+    font-size: var(--fzmed);
+}
+
+.main__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 798px;
+}
+
+.main__form > textarea {
+    width: 798px;
+    height: 346px;
+    resize: none;
+    padding: 24px;
+}
+
+.main__price-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.main__price-container input {
+    width: 60% !important;
+    margin-bottom: 0;
+}
+
+.main__price-inner {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.main__price-inner label {
+    margin-left: 12px;
+    margin-bottom: 0;
+}
+
+.main__checkbox {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 28px;
+}
+
+.main__checkbox input {
+    margin-top: 5px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.main__file-upload-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+
+.main__file-upload-button {
+    display: inline-block;
+    width: 335px;
+    height: 56px;
+    background-color: transparent;
+    color: var(--main-blue);
+    border: 1px solid var(--main-blue);
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+.main__file-upload-wrapper:hover .main__file-upload-button {
+    background-color: var(--main-blue);
+    color: white;
+}
+
+.main__file-upload-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.main__form > button {
+    align-self: center;
+}
+
+@media (max-width: 1919px) {
+    main {
+        padding: 80px 180px;
+    }
+
+    .divider {
+        width: 1000px;
+        margin-left: -100px;
+    }
+}
+
+@media (max-width: 1439px) {
+    main {
+        padding: 60px 140px;
+    }
+}
+
+@media (max-width: 1279px) {
+    main {
+        padding: 40px 120px;
+    }
+
+    input, select, textarea {
+        width: 100% !important;
+    }
+
+    .main__form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1023px) {
+    main {
+        padding: 20px 80px;
+    }
+
+    .divider {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .main__price-container {
+        width: 100%;
+    }
+
+    .main__price-container input[type="checkbox"] {
+        width: 30% !important;
+    }
+
+    .main__price-inner {
+        text-align: right;
+    }
+
+    .main__price-inner label {
+        width: 50%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    main {
+        padding: 10px 20px;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    .main__form {
+        margin-bottom: 50px;
+    }
+}
